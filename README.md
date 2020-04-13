@@ -1,12 +1,10 @@
 ![image](https://jenkins-themes.alefnode.com/images/jenkins-new-design-theme-logo.jpg)
 # Jenkins Themes
 Improving your user experience
+**Updated for Jenkins version 2.222 and above**
 
 
-Website: https://jenkins-theme.alefnode.com/
-
-So you love **Jenkins** but hate its ugly user interface and icons... Me too! Introducing **Jenkins Material Theme**.
-You can turn your favorite frog CI tool into a handsome prince in few steps!   
+Website: https://jenkins-theme.alefnode.com/  
 
 ## Features
 * Just one small css file (35K)
