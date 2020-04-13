@@ -110,6 +110,12 @@ module.exports = function (grunt) {
                         removeStyleElement: true
                     }]
                 },
+                files: [{
+                    expand: true,
+                    cwd: 'node_modules/jenkins-core-theme/images/',
+                    src: ['**/*.svg'],
+                    dest: 'node_modules/jenkins-core-theme/images/'
+                }]
             }
 
         },
