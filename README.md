@@ -14,8 +14,8 @@ Website: https://jenkins-themes.alefnode.com/
 * Customize the color and logo using the [generator][generator]
 
 ## Screenshots
-[![Screenshot jenkins-material-theme main](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png) [![Screenshot jenkins-material-theme console](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png)
-[![Screenshot jenkins-material-theme history](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history-large.png)
+[![Screenshot jenkins-material-theme main](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend.png) [![Screenshot jenkins-material-theme console](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console.png)
+[![Screenshot jenkins-material-theme history](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history.png)
 
 
 ## Installation
