@@ -5,7 +5,7 @@ Improving your user experience
 **Updated for Jenkins version 2.222 and above**
 
 
-Website: https://jenkins-theme.alefnode.com/  
+Website: https://jenkins-themes.alefnode.com/  
 
 ## Features
 * Just one small css file (35K)
@@ -14,17 +14,17 @@ Website: https://jenkins-theme.alefnode.com/
 * Customize the color and logo using the [generator][generator]
 
 ## Screenshots
-[![Screenshot jenkins-material-theme main](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png) [![Screenshot jenkins-material-theme console](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png)
-[![Screenshot jenkins-material-theme history](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history-large.png)
+[![Screenshot jenkins-material-theme main](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png) [![Screenshot jenkins-material-theme console](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png)
+[![Screenshot jenkins-material-theme history](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history.png)](https://jenkins-themes.alefnode.com/images/screenshot-jenkins-theme-material-history-large.png)
 
 
 ## Installation
 
 ### Using your Jenkins Hosting
 1. Choose your color:
-![image](https://jenkins-theme.alefnode.com/images/pallete.png)
+![image](https://jenkins-themes.alefnode.com/images/pallete.png)
 
-2. Replace `{{your-color-name}}` in the URL by the chosen color: `https://jenkins-theme.alefnode.com/dist/material-{{your-color-name}}.css`
+2. Replace `{{your-color-name}}` in the URL by the chosen color: `https://jenkins-themes.alefnode.com/dist/material-{{your-color-name}}.css`
 
 3. Download the generated URL
 
