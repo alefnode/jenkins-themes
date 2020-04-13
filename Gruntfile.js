@@ -34,7 +34,6 @@ module.exports = function (grunt) {
     var replaceFiles = [
         {src: ['dist/material-light.css'], dest: 'dist/material-light.css'},
         {src: ['dist/material-static.css'], dest: 'dist/material-static.css'},
-        {src: ['plugin/pom.xml'], dest: 'plugin/pom.xml'}
     ];
 
     var cssMinFiles = {
@@ -111,12 +110,6 @@ module.exports = function (grunt) {
                         removeStyleElement: true
                     }]
                 },
-                files: [{
-                    expand: true,
-                    cwd: 'node_modules/jenkins-core-theme/images/',
-                    src: ['**/*.svg'],
-                    dest: 'node_modules/jenkins-core-theme/images/'
-                }]
             }
 
         },
