@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jenkins Theme - jenkins-material-theme</title>
+    <meta name="description" content="Beautify your Jenkins with the Material Design theme! So you love Jenkins but hate its ugly user interface and icons… Me too! Introducing a Jenkins Theme based on Material Design. You can turn your favorite frog CI tool into a handsome prince in few steps!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/jenkins-material-theme/css/cayman.css">
+
+    <link rel="canonical" href="https://jenkins-theme.alefnode.com/jenkins-material-theme/">
+    <link rel="alternate" type="application/rss+xml" title="jenkins-material-theme" href="https://jenkins-theme.alefnode.com/jenkins-material-theme/feed.xml">
+
+    <meta http-equiv="Expires" content="604800">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="jenkins-material-theme">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Beautify your Jenkins with the Material Design theme!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/jenkins-contrib-themes/jenkins-material-theme/gh-pages/images/capa.png">
+
+</head>
+
+
+<body>
+
+
+<section class="page-header">
+    <img src="images/jenkins-logo.png">
+    <h1 class="project-name">jenkins-material-theme</h1>
+
+    <h2 class="project-tagline">Beautify your Jenkins with the Material Design theme!</h2>
+    <a href="https://github.com/alefnode/jenkins-material-theme" class="btn">View on GitHub</a>
+    <a href="files/material-light.css" class="btn">Download Jenkins Theme</a>
+</section>
+
+
+<section class="main-content">
+
+    <div style="text-align: center">
+        <iframe src="https://ghbtns.com/github-btn.html?user=afonsof&amp;repo=jenkins-material-theme&amp;type=watch&amp;count=true&amp;size=large"
+                allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=afonsof&amp;repo=jenkins-material-theme&amp;type=fork&amp;count=true&amp;size=large"
+                allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"></iframe>
+    </div>
+
+    <style>
+    #filePicker {
+        font-size: 12px;
+        width: 300px;
+        height: 40px;
+        color: transparent;
+    }
+
+    #filePicker::-webkit-file-upload-button {
+        display: none;
+    }
+
+    #filePicker::before {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        background-color: #26a69a;
+        transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+        font-size: 12px;
+        padding: 0.75rem 1rem;
+        border-radius: 1px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        text-transform: uppercase;
+
+        content: 'Select your company logo...';
+        -webkit-user-select: none;
+        cursor: pointer;
+    }
+
+    #colors {
+        width: 100%;
+    }
+
+    #colors div {
+        width: 120px;
+        height: 40px;
+        padding: 9px;
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 3px;
+    }
+</style>
+
+
+<h2>Build your own theme with a company logo!</h2>
+
+<h3>1. Select your color</h3>
+<div id="colors"></div>
+<div style="clear: both"></div>
+
+<h3>2. Choose your company logo</h3>
+<ul>
+    <li>Minimum height: 40px</li>
+    <li>Preferred type: Transparent PNG</li>
+    <li>Preferred size: up to 10KB</li>
+</ul>
+
+<input type="file" id="filePicker">
+<a style="display:none; background-color: #26a69a" href="" class="btn" id="download"
+   download="jenkins-material-theme.css">↓ &nbsp;Download your theme!</a>
+
+
+<script>
+    var colors = {
+        'red': '#F44336',
+        'pink': '#E91E63',
+        'purple': '#9C27B0',
+        'deep-purple': '#673AB7',
+        'indigo': '#3F51B5',
+        'blue': '#2196F3',
+        'light-blue': '#039BE5',
+        'cyan': '#0097A7',
+        'teal': '#26A69A',
+        'green': '#43A047',
+        'light-green': '#689F38',
+        'lime': '#AFB42B',
+        'yellow': '#FBC02D',
+        'amber': '#FF6F00',
+        'orange': '#EF6C00',
+        'deep-orange': '#FF5722',
+        'brown': '#795548',
+        'grey': '#757575',
+        'blue-grey': '#607D8B'
+    };
+
+    var colorElement = document.getElementById('colors');
+    for (var name in colors) {
+        var el = document.createElement('div');
+        el.style.backgroundColor = colors[name];
+        el.style.color = 'white';
+        el.innerHTML = name;
+        if(name =='teal'){
+            el.className = 'selected';
+        }
+        el.onclick = function () {
+            colorElement.childNodes.forEach(function (child) {
+                child.className = '';
+                child.style.display = 'none';
+            });
+            this.className = 'selected';
+            this.style.display = 'block';
+            reloadCss();
+        };
+        colorElement.appendChild(el);
+    }
+
+    var originalCss;
+    var newCssPrefix = "#header{background-image: url('data:image/png;base64,";
+    var newCssSuffix = "');background-repeat:no-repeat;" +
+            "background-size: auto 40px, cover;" +
+            "background-position: 10px 10px;}" +
+            "#jenkins-home-link{display:none !important}";
+
+    function reloadCss() {
+        var orignalCssRequest = new XMLHttpRequest();
+        orignalCssRequest.onload = function () {
+            originalCss = this.responseText;
+        };
+        orignalCssRequest.open('get', 'dist/material-' + document.getElementsByClassName('selected')[0].innerHTML + '.css', true);
+        orignalCssRequest.send();
+    }
+
+    var onFileChange = function (changeEvent) {
+        if (!changeEvent.target.files) return;
+
+        var reader = new FileReader();
+        reader.onload = function (readerEvent) {
+            var imageBase64 = btoa(readerEvent.target.result);
+            var newCss = originalCss + newCssPrefix + imageBase64 + newCssSuffix;
+            document.getElementById('download').href = "data:application/octet-stream;base64," + btoa(newCss);
+            document.getElementById('download').style.display = 'inline';
+            document.getElementById('filePicker').style.display = 'none';
+        };
+
+        reader.readAsBinaryString(changeEvent.target.files[0]);
+
+    };
+
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        document.getElementById('filePicker').addEventListener('change', onFileChange, false);
+    } else {
+        alert('The File APIs are not fully supported in this browser.');
+    }
+</script>
+
+
+    <p>So you love <strong>Jenkins</strong> but hate its ugly user interface and icons… Me too! Introducing <strong>Jenkins Material Theme</strong>.
+You can turn your favorite frog CI tool into a handsome prince in few steps! Install this Jenkins Theme!</p>
+
+<h2 id="features">Features</h2>
+<ul>
+  <li>Just one small css file (35K)</li>
+  <li>Embed minified SVG images</li>
+  <li>Multiple ways to install</li>
+</ul>
+
+<h2 id="screenshots">Screenshots</h2>
+<p><a href="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png"><img src="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main.png" alt="Screenshot jenkins-material-theme main" /></a>      <a href="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png"><img src="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend.png" alt="Screenshot jenkins-material-theme legend" /></a> <a href="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png"><img src="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console.png" alt="Screenshot jenkins-material-theme console" /></a>
+<a href="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history-large.png"><img src="https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history.png" alt="Screenshot jenkins-material-theme history" /></a></p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="using-this-github-page-recommended-auto-updated">Using this GitHub page (recommended) (auto-updated)</h3>
+
+<ol>
+  <li>
+    <p>Choose your color:
+<img src="https://jenkins-theme.alefnode.com/images/pallete.png" alt="image" /></p>
+  </li>
+  <li>
+    <p>Replace `` in the URL by the chosen color: <code class="highlighter-rouge">https://jenkins-theme.alefnode.com/files/material-.css</code></p>
+  </li>
+  <li>
+    <p>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin">Jenkins Simple Theme Plugin</a></p>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">Manage Jenkins</code></p>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">Configure System</code> and scroll down to <code class="highlighter-rouge">Theme</code></p>
+  </li>
+  <li>
+    <p>Set the CSS field to the generated URL.</p>
+  </li>
+  <li>
+    <p>Click <code class="highlighter-rouge">Save</code></p>
+  </li>
+</ol>
+
+<h3 id="using-your-jenkins-hosting">Using your Jenkins Hosting</h3>
+
+<ol>
+  <li>
+    <p>Follow the step 1 and 2 of the previous method</p>
+  </li>
+  <li>
+    <p>Download the generated URL</p>
+  </li>
+  <li>
+    <p>Upload the downloaded file to your web server</p>
+  </li>
+  <li>
+    <p>Follow the steps 3 to 7 of the previous method using your uploaded file as URL in step 6</p>
+  </li>
+</ol>
+
+<h3 id="using-stylish-only-you-will-be-able-to-see-the-awesome-theme">Using Stylish (only you will be able to see the awesome theme)</h3>
+
+<ol>
+  <li>
+    <p>Follow the step 1 and 2 of the previous method</p>
+  </li>
+  <li>
+    <p>Copy the content of the file downloaded file</p>
+  </li>
+  <li>
+    <p>Install the <a href="https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe">Stylish Chrome extension</a></p>
+  </li>
+  <li>
+    <p>Go to Stylish options and click in <code class="highlighter-rouge">Write new style</code></p>
+  </li>
+  <li>
+    <p>Paste the theme css in the code box</p>
+  </li>
+  <li>
+    <p>Click in <code class="highlighter-rouge">Specify</code> and set your jenkins domain</p>
+  </li>
+  <li>
+    <p>Click in <code class="highlighter-rouge">Save</code></p>
+  </li>
+  <li>
+    <p>Go to your Jenkins website and enable the theme in the Stylish Chrome toolbar icon</p>
+  </li>
+</ol>
+
+<h2 id="development">Development</h2>
+
+<p>CSS file are minified and compressed with Grunt. To prepare the environment:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install
+grunt
+</code></pre>
+</div>
+
+<p>This will generate the following file:</p>
+<ul>
+  <li>dist/material-light.css</li>
+</ul>
+
+<h2 id="compatibility">Compatibility</h2>
+<ul>
+  <li>
+    <p>Simple Theme plugin 0.3</p>
+  </li>
+  <li>
+    <p>Jenkins 1.636</p>
+  </li>
+  <li>
+    <p>Firefox 3.5+</p>
+  </li>
+  <li>
+    <p>Chrome 4+</p>
+  </li>
+  <li>
+    <p>Safari 4+</p>
+  </li>
+  <li>
+    <p>Opera 15+</p>
+  </li>
+  <li>
+    <p>Microsoft IE11 and Edge</p>
+  </li>
+</ul>
+
+<p>If you are experiencing issues please let me know! Also, feel free to contribute!</p>
+
+<h2 id="license">License</h2>
+<p>http://afonsof.mit-license.org/</p>
+
+<h2 id="thanks-to">Thanks to</h2>
+
+<ul>
+  <li>
+    <p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin">Simple Theme Plugin</a> for the Simple Theme plugin</p>
+  </li>
+  <li>
+    <p><a href="https://www.google.com/design/spec/material-design/introduction.html">Google</a> for the the material design inspiration and the icons</p>
+  </li>
+  <li>
+    <p><a href="https://materialdesignicons.com/">Material Design Icons</a> for some extra icons</p>
+  </li>
+  <li>
+    <p><a href="https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe">Stylish</a> for making the test of new versions easy</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/rackerlabs/canon-jenkins">canon-jenkins</a> for the base theme</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Heldroe">@Heldroe</a> for Firefox and Microsoft support</p>
+  </li>
+</ul>
+
+
+</section>
+
+<section class="site-footer">
+    Made with <span style="color: #F44336">♥</span>
+    by <a href="http://blog.alefnode.com">Alefnode</a>
+</section>
+
+</body>
+
+</html>
