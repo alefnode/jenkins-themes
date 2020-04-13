@@ -1,6 +1,6 @@
-![image](https://jenkins-themes.alefnode.com/images/jenkins-new-design-theme.jpg)
-# Jenkins New Design Theme
-Beautify your Jenkins with the New Design theme!
+![image](https://jenkins-themes.alefnode.com/images/jenkins-new-design-theme-logo.jpg)
+# Jenkins Themes
+Improving your user experience
 
 
 Website: https://jenkins-theme.alefnode.com/
@@ -72,13 +72,7 @@ This will generate the following file:
 - dist/material-light.css
 
 ## Compatibility
-- Simple Theme plugin 0.3
-- Jenkins 1.636
-- Firefox 3.5+
-- Chrome 4+
-- Safari 4+
-- Opera 15+
-- Microsoft IE11 and Edge
+- Jenkins 2.222 and above
 
 
 If you are experiencing issues please let me know! Also, feel free to contribute!
