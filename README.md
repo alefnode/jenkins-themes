@@ -15,7 +15,7 @@ You can turn your favorite frog CI tool into a handsome prince in few steps!
 * Customize the color and logo using the [generator][generator]
 
 ## Screenshots
-[![Screenshot jenkins-material-theme main](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png) [![Screenshot jenkins-material-theme console](http://afonsof.com/jenkins-material-theme/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png)
+[![Screenshot jenkins-material-theme main](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-main-large.png)      [![Screenshot jenkins-material-theme legend](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-legend-large.png) [![Screenshot jenkins-material-theme console](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-console-large.png)
 [![Screenshot jenkins-material-theme history](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history.png)](https://jenkins-theme.alefnode.com/images/screenshot-jenkins-theme-material-history-large.png)
 
 
@@ -25,7 +25,7 @@ You can turn your favorite frog CI tool into a handsome prince in few steps!
 1. Choose your color:
 ![image](https://jenkins-theme.alefnode.com/images/pallete.png)
 
-2. Replace `{{your-color-name}}` in the URL by the chosen color: `https://jenkins-theme.alefnode.com/files/material-{{your-color-name}}.css`
+2. Replace `{{your-color-name}}` in the URL by the chosen color: `https://jenkins-theme.alefnode.com/dist/material-{{your-color-name}}.css`
 
 3. Download the generated URL
 
@@ -83,11 +83,8 @@ This will generate the following file:
 
 If you are experiencing issues please let me know! Also, feel free to contribute!
 
-## Based on Afonsof
-http://afonsof.mit-license.org/
-
 ## Thanks to
-- [Jenkins Theme][afonsof-repo] for the Jenkins Original Themes
+- [Jenkins Theme][afonsof-repo] for the Jenkins Themes based on repo
 - [Simple Theme Plugin][simple] for the Simple Theme plugin
 - [Google][google] for the the material design inspiration and the icons
 - [Material Design Icons][material-design-icons] for some extra icons
