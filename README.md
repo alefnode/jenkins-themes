@@ -93,5 +93,5 @@ If you are experiencing issues please let me know! Also, feel free to contribute
 [stylish]: https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe
 [canon-jenkins]: https://github.com/rackerlabs/canon-jenkins
 [heldroe]: https://github.com/Heldroe
-[generator]: http://afonsof.com/jenkins-material-theme
+[generator]: https://jenkins-themes.alefnode.com/
 [bootstraponline]: https://github.com/bootstraponline
