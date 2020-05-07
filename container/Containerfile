@@ -1,17 +1,20 @@
 # Website www.seguridadwireless.es container
 # author: Adrian Campos <adriancampos@teachelp.com>
 
-FROM centos:8
+FROM registry.alefnode.com/centos:8
 MAINTAINER Alenode <adriancampos@teachelp.com>
 
 RUN yum -y install nginx && \
     yum clean all && \
     mkdir -p /var/www/html
 
+RUN mkdir -p /var/www/html/images && \
+    mkdir -p /var/www/html/dist
+
 COPY ./container/nginx.conf /etc/nginx/nginx.conf
-COPY ./images /var/www/html/
+COPY ./images/* /var/www/html/images/
 COPY ./webpage/* /var/www/html/
-COPY ./dist /var/www/html/
+COPY ./dist/* /var/www/html/dist/
 
 EXPOSE 80
 
