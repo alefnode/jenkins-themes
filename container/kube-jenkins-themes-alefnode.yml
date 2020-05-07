@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-themes-alefnode-deployment
+  labels:
+    app: jenkins-themes-alefnode
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jenkins-themes-alefnode
+  template:
+    metadata:
+      labels:
+        app: jenkins-themes-alefnode
+    spec:
+      containers:
+      - name: jenkins-themes-alefnode
+        image: registry.alefnode.com/jenkins-themes-alefnode:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-themes-alefnode-service
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30194
+  selector:
+    app: jenkins-themes-alefnode
