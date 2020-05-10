@@ -5,7 +5,12 @@ metadata:
   labels:
     app: jenkins-themes-alefnode
 spec:
-  replicas: 3
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
   selector:
     matchLabels:
       app: jenkins-themes-alefnode
@@ -20,6 +25,13 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1
       imagePullSecrets:
       - name: regcred
 
