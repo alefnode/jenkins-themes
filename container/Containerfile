@@ -20,4 +20,4 @@ EXPOSE 80
 
 #USER nginx
 
-CMD ["nginx"]
+CMD ["nginx","-g","daemon off;"]
