@@ -2,5 +2,4 @@
 node_modules/
 .sass-cache/
 _site/
-dist/
 .tmp/
