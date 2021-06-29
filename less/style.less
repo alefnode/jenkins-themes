@@ -119,16 +119,18 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   text-shadow: 0 1px #fff
 }
 
-.tabBar .tab a {
-  &:active {
-    background: #fbfbfb !important;
-    border-color: #fbfbfb !important;
-  }
+.tabBar [type=radio]:checked ~ a {
+  border: solid 1px #f0f0f0;
+  border-bottom: none;
+  background: #eee;
+  color: #000;
+  font-weight: bold;
 }
 
-.bigtable .pane-header, .bigtable th {
+.bigtable th {
   background: #f0f0f0 !important;
   border: none;
+  font-weight: bold;
 }
 
 .pane-frame table,
