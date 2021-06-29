@@ -53,7 +53,7 @@ a, a:hover, a:visited, a:link {
   .shadow1();
   font-size: 13px !important;
   height: 50px;
-  background-color: @color-white;
+  background-color: @color-primary;
   text-transform: uppercase;
   right: 0;
   left: 0;
@@ -117,6 +117,29 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   color: #888 !important;
   text-decoration: none;
   text-shadow: 0 1px #fff
+}
+
+.tabBar [type=radio]:checked ~ a {
+  border: solid 1px #f0f0f0;
+  border-bottom: none;
+  background: #eee;
+  color: #000;
+  font-weight: bold;
+}
+
+.bigtable th {
+  background: #f0f0f0 !important;
+  border: none;
+  font-weight: bold;
+}
+
+.bigtable td {
+  border-top: none;
+}
+
+.pane-frame table,
+.pane-frame .bigtable tr {
+  border: none;
 }
 
 table.pane tr:nth-child(odd) td {
