@@ -119,12 +119,21 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   text-shadow: 0 1px #fff
 }
 
-.tabBar .tab .active {
-  background: #f0f0f0 !important
+.tabBar .tab a {
+  &:active {
+    background: #fbfbfb !important;
+    border-color: #fbfbfb !important;
+  }
 }
 
 .bigtable .pane-header, .bigtable th {
-  background: #f0f0f0 !important
+  background: #f0f0f0 !important;
+  border: none;
+}
+
+.pane-frame table,
+.pane-frame .bigtable tr {
+  border: none;
 }
 
 table.pane tr:nth-child(odd) td {
