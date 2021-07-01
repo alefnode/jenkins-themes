@@ -119,31 +119,6 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   text-shadow: 0 1px #fff
 }
 
-.tabBar [type=radio]:checked ~ a {
-  border: solid 1px #f0f0f0;
-  border-bottom: none;
-  background: #eee;
-  color: #000;
-  font-weight: bold;
-}
-
-svg[class*=anime] { visibility: collapse }
-
-.bigtable th {
-  background: #f0f0f0 !important;
-  border: none;
-  font-weight: bold;
-}
-
-.bigtable td {
-  border-top: none;
-}
-
-.pane-frame table,
-.pane-frame .bigtable tr {
-  border: none;
-}
-
 table.pane tr:nth-child(odd) td {
   background-color: @color-white
 }
@@ -355,3 +330,39 @@ pre {
     margin-left: 35%!important;
   }
 }
+
+// Fix system colors
+.tabBar [type=radio]:checked ~ a {
+  border: solid 1px #f0f0f0;
+  border-bottom: none;
+  background: #eee;
+  color: #000;
+  font-weight: bold;
+}
+
+svg[class*=anime] { visibility: collapse }
+
+.bigtable th {
+  background: #f0f0f0 !important;
+  border: none;
+  font-weight: bold;
+}
+
+.bigtable td {
+  border-top: none;
+}
+
+.pane-frame table,
+.pane-frame .bigtable tr {
+  border: none;
+}
+
+// hide additional spinning loader icon
+// See: https://github.com/TobiX/jenkins-neo2-theme/issues/40
+.icon-blue-anime .svg-icon,
+.icon-aborted-anime .svg-icon,
+.icon-yellow-anime .svg-icon,
+.icon-red-anime .svg-icon {
+  display: none;
+}
+
