@@ -3,6 +3,7 @@
 Improving your user experience
 
 **Updated for Jenkins version 2.222 and above**
+**Tested in Jenkins 2.289.1**
 
 
 Website: https://jenkins-themes.alefnode.com/  
