@@ -24,7 +24,12 @@ Website: https://jenkins-themes.alefnode.com/
 1. Choose your color:
 ![image](https://jenkins-themes.alefnode.com/images/pallete.png)
 
-2. Replace `{{your-color-name}}` in the URL by the chosen color: `https://ghcdn.rawgit.org/alefnode/jenkins-themes/CDN/dist/material-{{your-color-name}}.css`
+2. Replace `{{your-color-name}}` in the URL by the chosen color: 
+`https://jenkins-themes.alefnode.com/dist/material-{{your-color-name}.css`
+
+`https://raw.githubusercontent.com/alefnode/jenkins-themes/CDN/dist/material-{{your-color-name}}.css`
+
+`https://cdn.jsdelivr.net/gh/alefnode/jenkins-themes@CDN/dist/material-{{your-color-name}}.css`
 
 3. Download the generated URL
 
