@@ -20,7 +20,7 @@ COPY ./images/* /var/www/html/images/
 COPY ./webpage/* /var/www/html/
 COPY ./dist/* /var/www/html/dist/
 
-EXPOSE 80
+EXPOSE 8080
 
 #USER nginx
 
